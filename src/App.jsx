@@ -10,6 +10,8 @@ import {
   Link,
 } from "react-router-dom";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const router = createBrowserRouter([
   {
@@ -41,7 +43,9 @@ const router = createBrowserRouter([
 export default function App() {
   return (
     <div>
+      <Provider store={appStore}>
       <RouterProvider router={router} />
+      </Provider>
     </div>
   )
 }
