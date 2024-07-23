@@ -177,30 +177,38 @@ const oldProducts = [
 
 const ProductList = () => {
   const dispatch = useDispatch();
+  const [sort, setSort] = useState({});
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
   const [filter, setFilter] = useState({})
   const products = useSelector(selectAllProducts);
 
-  const handleFilter = (e, section, option)=>{
+  const handleFilter = (e, section, option) => {
+    // console.log(e.target.checked)
     const newFilter = {...filter};
-    // , [section.id] : option.value
-    if(e.target.checked==true){
-      newFilter[section.id] = option.value
-    }else{
-      delete newFilter[section.id];
+    // TODO : on server it will support multiple categories
+    if(e.target.checked){
+      if(newFilter[section.id]){
+        newFilter[section.id].push(option.value)
+      } else{
+        newFilter[section.id] = [option.value]
+      }
+    } else{
+       const index = newFilter[section.id].findIndex(el=>el===option.value)
+       newFilter[section.id].splice(index,1);
     }
-    setFilter(newFilter)
-    dispatch(fetchProductsByFiltersAsync(newFilter))
-  }
-  const handleSort = (e, option)=>{
-    const newFilter = {...filter,_sort : option.sort,}
-    setFilter(newFilter)
-    dispatch(fetchProductsByFiltersAsync(newFilter))
-  }
+    // console.log({newFilter});
+
+    setFilter(newFilter);
+  };
+  const handleSort = (e, option) => {
+    const sort = { _sort: option.sort, _order: option.order };
+    // console.log({sort});
+    setSort(sort);
+  };
 
   useEffect(() => {
-    dispatch(fetchProductsByFiltersAsync(filter))
-  }, [dispatch, filter]);
+    dispatch(fetchProductsByFiltersAsync({filter, sort}));
+  }, [dispatch,filter,sort]);
 
   return (
     <div className="bg-white">
