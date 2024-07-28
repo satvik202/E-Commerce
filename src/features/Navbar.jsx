@@ -12,7 +12,10 @@ import {
   ShoppingCartIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { selectLoggedInUser } from "../utils/authSlice";
+import { selectCart } from "../utils/cartSlice";
 
 const user = {
   name: "Tom Cook",
@@ -25,9 +28,9 @@ const navigation = [
   { name: "Team", href: "#", current: false },
 ];
 const userNavigation = [
-  { name: "Your Profile", href: "#" },
-  { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
+  { name: "Your Profile", link: "/profile" },
+  { name: "Settings", link: "/" },
+  { name: "Sign out", link: "/login" },
 ];
 
 function classNames(...classes) {
@@ -35,6 +38,8 @@ function classNames(...classes) {
 }
 
 const Navbar = ({ children }) => {
+  // const user = useSelector(selectLoggedInUser)
+  const items = useSelector(selectCart)
   return (
     <>
       <div className="min-h-full">
@@ -84,9 +89,9 @@ const Navbar = ({ children }) => {
                       />
                     </button>
                   </Link>
-                  <span className="inline-flex items-center rounded-md mb-7 -ml-3 z-10 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-                    3
-                  </span>
+                  {items.length && <span className="inline-flex items-center rounded-md mb-7 -ml-3 z-10 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                    {items.length}
+                  </span>}
 
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
@@ -107,7 +112,7 @@ const Navbar = ({ children }) => {
                       {userNavigation.map((item) => (
                         <MenuItem key={item.name}>
                           <a
-                            href={item.href}
+                            to={item.link}
                             className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
                           >
                             {item.name}
@@ -179,9 +184,9 @@ const Navbar = ({ children }) => {
                     <ShoppingCartIcon aria-hidden="true" className="h-6 w-6" />
                   </button>
                 </Link>
-                <span className="inline-flex items-center rounded-md mb-7 -ml-3 z-10 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-                  3
-                </span>
+                {items.length && <span className="inline-flex items-center rounded-md mb-7 -ml-3 z-10 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                  {items.length}
+                </span>}
               </div>
               <div className="mt-3 space-y-1 px-2">
                 {userNavigation.map((item) => (
