@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { deleteItemFromCartAsync, selectCart, updateCartAsync } from "../utils/cartSlice";
 
 const Cart = () => {
@@ -19,6 +19,7 @@ const Cart = () => {
 
   return (
     <>
+    {!items.length && <Navigate to='/' replace={true}></Navigate>}
       <div className="mx-auto bg-white rounded-lg mt-12 max-w-7xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 py-2">
           Cart

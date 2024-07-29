@@ -42,6 +42,19 @@ const router = createBrowserRouter([
     path : "/products/:id",
     element: <Protected><ProductDetailPage/></Protected>
   },
+  {
+    path: '/order-success/:id',
+    element: <OrderSuccessPage></OrderSuccessPage>
+  },
+  {
+    path: '/orders',
+    element: <UserOrdersPage></UserOrdersPage>
+      // we will add Page later right now using component directly.
+  },
+  {
+    path: '*',
+    element: <PageNotFound></PageNotFound>
+  },
 ]);
 
 export default function App() {
