@@ -37,7 +37,7 @@ const Signup = () => {
           <form className="space-y-6" noValidate onSubmit={handleSubmit((data)=> dispatch(createUserAsync({
             email:data.email, 
             password: data.password,
-            addresses:[]
+            addresses : []
             })))}>
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">

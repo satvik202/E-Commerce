@@ -9,7 +9,7 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm()
-  console.log(errors)
+  // console.log(errors)
 
   const dispatch = useDispatch()
   const error = useSelector(selectError)
