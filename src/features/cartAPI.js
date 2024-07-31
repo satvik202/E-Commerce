@@ -33,6 +33,7 @@ export const deleteItemFromCart = async (itemId)=> {
 }
 
 
+
 export const fetchCartByUserId = async (id)=> {
     return new Promise(async (resolve) => {
         const response = await fetch("http://localhost:3000/cart?user="+id)
@@ -40,3 +41,20 @@ export const fetchCartByUserId = async (id)=> {
         resolve({ data });
     })
 }
+
+export const resetCart = async (userId)=> {
+    // fetchCartByUserId and then deleteItemFromCart
+    return new Promise(async (resolve) => {
+        const response = await fetchCartByUserId(userId)
+        const items = response.data
+        // console.log(items)
+        for(let item of items){
+             await deleteItemFromCart(item.id)
+        }
+        resolve( {status : "success"});
+    })
+}
+
+
+
+

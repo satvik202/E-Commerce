@@ -16,6 +16,8 @@ import Protected from "./features/Protected";
 import { useEffect } from "react";
 import { fetchCartByUserIdAsync } from "./utils/cartSlice";
 import { selectLoggedInUser } from "./utils/authSlice";
+import PageNotFound from "./pages/404";
+import OrderSuccessPage from "./pages/OrderSuccessPage";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +44,14 @@ const router = createBrowserRouter([
     path : "/products/:id",
     element: <Protected><ProductDetailPage/></Protected>
   },
+  {
+    path : "/order-success/:id",
+    element: <OrderSuccessPage></OrderSuccessPage>
+  },
+  {
+    path : "*",
+    element : <PageNotFound></PageNotFound>
+  }
 ]);
 
 export default function App() {
