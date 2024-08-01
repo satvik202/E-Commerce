@@ -3,12 +3,14 @@ import productReducer from './productSlice'
 import authReducer from './authSlice'
 import cartReducer from'./cartSlice'
 import orderReducer from './orderSlice'
+import userReducer from './userSlice'
 export default configureStore({
   reducer: {
     product : productReducer,
     auth : authReducer,
     cart : cartReducer,
-    order : orderReducer
+    order : orderReducer,
+    user : userReducer
   },
 })
 

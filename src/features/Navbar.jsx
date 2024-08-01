@@ -14,7 +14,6 @@ import {
 } from "@heroicons/react/24/outline";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { selectLoggedInUser } from "../utils/authSlice";
 import { selectCart } from "../utils/cartSlice";
 
 const user = {
@@ -28,9 +27,9 @@ const navigation = [
   { name: "Team", href: "#", current: false },
 ];
 const userNavigation = [
-  { name: "Your Profile", link: "/profile" },
-  { name: "Settings", link: "/" },
-  { name: "Sign out", link: "/login" },
+  { name: "My Profile", link: "/profile" },
+  { name: "My Orders", link: "/orders" },
+  { name: "Sign out", link: "/logout" },
 ];
 
 function classNames(...classes) {
@@ -38,8 +37,8 @@ function classNames(...classes) {
 }
 
 const Navbar = ({ children }) => {
-  // const user = useSelector(selectLoggedInUser)
-  // console.log(user)
+
+
   const items = useSelector(selectCart)
   return (
     <>
@@ -112,12 +111,12 @@ const Navbar = ({ children }) => {
                     >
                       {userNavigation.map((item) => (
                         <MenuItem key={item.name}>
-                          <a
+                          <Link
                             to={item.link}
                             className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
                           >
                             {item.name}
-                          </a>
+                          </Link>
                         </MenuItem>
                       ))}
                     </MenuItems>

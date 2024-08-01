@@ -11,13 +11,17 @@ import {
 } from "react-router-dom";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import { Provider, useDispatch, useSelector } from "react-redux";
-import appStore from "./utils/appStore";
 import Protected from "./features/Protected";
 import { useEffect } from "react";
 import { fetchCartByUserIdAsync } from "./utils/cartSlice";
 import { selectLoggedInUser } from "./utils/authSlice";
 import PageNotFound from "./pages/404";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
+import UserOrdersPage from "./pages/UserOrdersPage";
+import UserProfilePage from "./pages/UserProfilePage";
+import { fetchLoggedInUserAsync } from "./utils/userSlice";
+import LogOut from "./pages/LogOut";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage"
 
 const router = createBrowserRouter([
   {
@@ -49,6 +53,22 @@ const router = createBrowserRouter([
     element: <OrderSuccessPage></OrderSuccessPage>
   },
   {
+    path : "/orders",
+    element: <UserOrdersPage></UserOrdersPage>
+  },
+  {
+    path : "/profile",
+    element: <UserProfilePage></UserProfilePage>
+  },
+  {
+    path : "/logOut",
+    element: <LogOut></LogOut>
+  },
+  {
+    path : "/forgot-password",
+    element: <ForgotPasswordPage></ForgotPasswordPage>
+  },
+  {
     path : "*",
     element : <PageNotFound></PageNotFound>
   }
@@ -60,6 +80,7 @@ export default function App() {
   useEffect(()=>{
     if(user){
       dispatch(fetchCartByUserIdAsync(user.id))
+      dispatch(fetchLoggedInUserAsync(user.id))
     }
     
   },[dispatch, user])

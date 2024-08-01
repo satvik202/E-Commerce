@@ -9456,13 +9456,13 @@
       "password": "Dummy@123",
       "addresses": [
         {
-          "name": "xyz",
+          "name": "Abhishek R",
           "email": "dummy@gmail.com",
-          "phone": "1122334455",
-          "street": "bjp",
-          "city": "nyc",
-          "state": "ny",
-          "pinCode": "000000"
+          "phone": "1212121212",
+          "street": "a-19/16",
+          "city": "rohini",
+          "state": "delhi",
+          "pinCode": "110089"
         }
       ]
     },
@@ -9554,6 +9554,70 @@
       "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png",
       "quantity": 1,
       "user": "3732"
+    },
+    {
+      "id": "c2a0",
+      "title": "Annibale Colombo Sofa",
+      "description": "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.",
+      "category": "furniture",
+      "price": 2499.99,
+      "discountPercentage": 18.54,
+      "rating": 3.08,
+      "stock": 16,
+      "tags": [
+        "furniture",
+        "sofas"
+      ],
+      "brand": "Annibale Colombo",
+      "sku": "LUU95CQP",
+      "weight": 3,
+      "dimensions": {
+        "width": 20.97,
+        "height": 19.11,
+        "depth": 25.81
+      },
+      "warrantyInformation": "1 month warranty",
+      "shippingInformation": "Ships overnight",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Tyler Davis",
+          "reviewerEmail": "tyler.davis@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Excellent quality!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Hannah Robinson",
+          "reviewerEmail": "hannah.robinson@x.dummyjson.com"
+        },
+        {
+          "rating": 3,
+          "comment": "Waste of money!",
+          "date": "2024-05-23T08:56:21.620Z",
+          "reviewerName": "Madison Collins",
+          "reviewerEmail": "madison.collins@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "7 days return policy",
+      "minimumOrderQuantity": 1,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.620Z",
+        "updatedAt": "2024-05-23T08:56:21.620Z",
+        "barcode": "0426785817074",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png",
+        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/3.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png",
+      "quantity": 1,
+      "user": "72b2"
     }
   ],
   "orders": [
@@ -9817,6 +9881,544 @@
         "city": "nyc",
         "state": "ny",
         "pinCode": "000000"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "539b",
+      "items": [
+        {
+          "id": "7d12",
+          "title": "MotoGP CI.H1",
+          "description": "The MotoGP CI.H1 is a high-performance motorcycle inspired by MotoGP racing technology. It offers cutting-edge features and precision engineering for an exhilarating riding experience.",
+          "category": "motorcycle",
+          "price": 14999.99,
+          "discountPercentage": 17,
+          "rating": 4.15,
+          "stock": 85,
+          "tags": [
+            "motorcycles",
+            "sportbikes"
+          ],
+          "brand": "MotoGP",
+          "sku": "0ENL5IX6",
+          "weight": 9,
+          "dimensions": {
+            "width": 27.4,
+            "height": 10.05,
+            "depth": 5.17
+          },
+          "warrantyInformation": "2 year warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 1,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Aaliyah Hanson",
+              "reviewerEmail": "aaliyah.hanson@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Very pleased!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Jacob Cooper",
+              "reviewerEmail": "jacob.cooper@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Excellent quality!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Samantha Martinez",
+              "reviewerEmail": "samantha.martinez@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.624Z",
+            "updatedAt": "2024-05-23T08:56:21.624Z",
+            "barcode": "0702250890221",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/motorcycle/MotoGP%20CI.H1/1.png",
+            "https://cdn.dummyjson.com/products/images/motorcycle/MotoGP%20CI.H1/2.png",
+            "https://cdn.dummyjson.com/products/images/motorcycle/MotoGP%20CI.H1/3.png",
+            "https://cdn.dummyjson.com/products/images/motorcycle/MotoGP%20CI.H1/4.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/motorcycle/MotoGP%20CI.H1/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        }
+      ],
+      "totalAmmount": 12449.991699999999,
+      "totalItemCount": 1,
+      "user": {
+        "id": "72b2",
+        "email": "dummy@gmail.com",
+        "password": "Dummy@123",
+        "addresses": [
+          {
+            "name": "xyz",
+            "email": "dummy@gmail.com",
+            "phone": "1122334455",
+            "street": "bjp",
+            "city": "nyc",
+            "state": "ny",
+            "pinCode": "000000"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "xyz",
+        "email": "dummy@gmail.com",
+        "phone": "1122334455",
+        "street": "bjp",
+        "city": "nyc",
+        "state": "ny",
+        "pinCode": "000000"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "7c78",
+      "items": [
+        {
+          "id": "83bd",
+          "title": "Apple MacBook Pro 14 Inch Space Grey",
+          "description": "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.",
+          "category": "laptops",
+          "price": 1999.99,
+          "discountPercentage": 9.25,
+          "rating": 3.13,
+          "stock": 39,
+          "tags": [
+            "laptops",
+            "apple"
+          ],
+          "brand": "Apple",
+          "sku": "QDKO6NRJ",
+          "weight": 4,
+          "dimensions": {
+            "width": 12.38,
+            "height": 21.55,
+            "depth": 27.95
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 week",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Would buy again!",
+              "date": "2024-05-23T08:56:21.622Z",
+              "reviewerName": "Hunter Gordon",
+              "reviewerEmail": "hunter.gordon@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Would buy again!",
+              "date": "2024-05-23T08:56:21.622Z",
+              "reviewerName": "Emma Wilson",
+              "reviewerEmail": "emma.wilson@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very pleased!",
+              "date": "2024-05-23T08:56:21.622Z",
+              "reviewerName": "David Martinez",
+              "reviewerEmail": "david.martinez@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.622Z",
+            "updatedAt": "2024-05-23T08:56:21.622Z",
+            "barcode": "3883623063065",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/1.png",
+            "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/2.png",
+            "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        }
+      ],
+      "totalAmmount": 1814.990925,
+      "totalItemCount": 1,
+      "user": {
+        "id": "72b2",
+        "email": "dummy@gmail.com",
+        "password": "Dummy@123",
+        "addresses": [
+          {
+            "name": "xyz",
+            "email": "dummy@gmail.com",
+            "phone": "1122334455",
+            "street": "bjp",
+            "city": "nyc",
+            "state": "ny",
+            "pinCode": "000000"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "xyz",
+        "email": "dummy@gmail.com",
+        "phone": "1122334455",
+        "street": "bjp",
+        "city": "nyc",
+        "state": "ny",
+        "pinCode": "000000"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "b784",
+      "items": [
+        {
+          "id": "cdb1",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "quantity": 5,
+          "user": "72b2"
+        }
+      ],
+      "totalAmmount": 46.368584999999996,
+      "totalItemCount": 5,
+      "user": {
+        "id": "72b2",
+        "email": "dummy@gmail.com",
+        "password": "Dummy@123",
+        "addresses": [
+          {
+            "name": "xyz",
+            "email": "dummy@gmail.com",
+            "city": "nyc",
+            "state": "ny",
+            "pinCode": "000000",
+            "phone": "1122334455",
+            "street": "BJP headquarters"
+          },
+          {
+            "name": "Abhishek R",
+            "email": "dummy@gmail.com",
+            "phone": "1212121212",
+            "street": "a-19/16",
+            "city": "rohini",
+            "state": "delhi",
+            "pinCode": "110089"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Abhishek R",
+        "email": "dummy@gmail.com",
+        "phone": "1212121212",
+        "street": "a-19/16",
+        "city": "rohini",
+        "state": "delhi",
+        "pinCode": "110089"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "c4d9",
+      "items": [
+        {
+          "id": "c62f",
+          "title": "Rolex Submariner Watch",
+          "description": "The Rolex Submariner is a legendary dive watch with a rich history. Known for its durability and water resistance, it's a symbol of adventure and exploration.",
+          "category": "mens-watches",
+          "price": 13999.99,
+          "discountPercentage": 0.82,
+          "rating": 2.97,
+          "stock": 35,
+          "tags": [
+            "watches",
+            "luxury watches"
+          ],
+          "brand": "Rolex",
+          "sku": "XFGRO0O5",
+          "weight": 5,
+          "dimensions": {
+            "width": 5.22,
+            "height": 27.59,
+            "depth": 16.93
+          },
+          "warrantyInformation": "No warranty",
+          "shippingInformation": "Ships in 1-2 business days",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very dissatisfied!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Emily Brown",
+              "reviewerEmail": "emily.brown@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Highly impressed!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Nova Cooper",
+              "reviewerEmail": "nova.cooper@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Would not recommend!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Julian James",
+              "reviewerEmail": "julian.james@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "90 days return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.624Z",
+            "updatedAt": "2024-05-23T08:56:21.624Z",
+            "barcode": "6567997358364",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Submariner%20Watch/1.png",
+            "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Submariner%20Watch/2.png",
+            "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Submariner%20Watch/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/mens-watches/Rolex%20Submariner%20Watch/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        },
+        {
+          "id": "432d",
+          "title": "Apple MacBook Pro 14 Inch Space Grey",
+          "description": "The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.",
+          "category": "laptops",
+          "price": 1999.99,
+          "discountPercentage": 9.25,
+          "rating": 3.13,
+          "stock": 39,
+          "tags": [
+            "laptops",
+            "apple"
+          ],
+          "brand": "Apple",
+          "sku": "QDKO6NRJ",
+          "weight": 4,
+          "dimensions": {
+            "width": 12.38,
+            "height": 21.55,
+            "depth": 27.95
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 week",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Would buy again!",
+              "date": "2024-05-23T08:56:21.622Z",
+              "reviewerName": "Hunter Gordon",
+              "reviewerEmail": "hunter.gordon@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Would buy again!",
+              "date": "2024-05-23T08:56:21.622Z",
+              "reviewerName": "Emma Wilson",
+              "reviewerEmail": "emma.wilson@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very pleased!",
+              "date": "2024-05-23T08:56:21.622Z",
+              "reviewerName": "David Martinez",
+              "reviewerEmail": "david.martinez@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.622Z",
+            "updatedAt": "2024-05-23T08:56:21.622Z",
+            "barcode": "3883623063065",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/1.png",
+            "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/2.png",
+            "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/laptops/Apple%20MacBook%20Pro%2014%20Inch%20Space%20Grey/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        },
+        {
+          "id": "603b",
+          "title": "Kawasaki Z800",
+          "description": "The Kawasaki Z800 is a powerful and agile sportbike known for its striking design and performance. It's equipped with advanced features, making it a favorite among motorcycle enthusiasts.",
+          "category": "motorcycle",
+          "price": 8999.99,
+          "discountPercentage": 15.07,
+          "rating": 4.06,
+          "stock": 88,
+          "tags": [
+            "motorcycles",
+            "sportbikes"
+          ],
+          "brand": "Kawasaki",
+          "sku": "9WBTI8EP",
+          "weight": 7,
+          "dimensions": {
+            "width": 28.34,
+            "height": 11.9,
+            "depth": 8.19
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 4,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Penelope Harper",
+              "reviewerEmail": "penelope.harper@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Natalie Harris",
+              "reviewerEmail": "natalie.harris@x.dummyjson.com"
+            },
+            {
+              "rating": 3,
+              "comment": "Would not buy again!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Dylan Wells",
+              "reviewerEmail": "dylan.wells@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "No return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.624Z",
+            "updatedAt": "2024-05-23T08:56:21.624Z",
+            "barcode": "0537669788973",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/1.png",
+            "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/2.png",
+            "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/3.png",
+            "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/4.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/motorcycle/Kawasaki%20Z800/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        }
+      ],
+      "totalAmmount": 23343.872514,
+      "totalItemCount": 3,
+      "user": {
+        "id": "72b2",
+        "email": "dummy@gmail.com",
+        "password": "Dummy@123",
+        "addresses": [
+          {
+            "name": "xyz",
+            "email": "dummy@gmail.com",
+            "city": "nyc",
+            "state": "ny",
+            "pinCode": "000000",
+            "phone": "1122334455",
+            "street": "BJP headquarters"
+          },
+          {
+            "name": "Abhishek R",
+            "email": "dummy@gmail.com",
+            "phone": "1212121212",
+            "street": "a-19/16",
+            "city": "rohini",
+            "state": "delhi",
+            "pinCode": "110089"
+          }
+        ]
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Abhishek R",
+        "email": "dummy@gmail.com",
+        "phone": "1212121212",
+        "street": "a-19/16",
+        "city": "rohini",
+        "state": "delhi",
+        "pinCode": "110089"
       },
       "status": "pending"
     }

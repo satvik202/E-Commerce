@@ -8,7 +8,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { addToCartAsync } from "../utils/cartSlice";
-import { selectLoggedInUser } from "../utils/authSlice";
+import { selectUserInfo } from "../utils/userSlice";
 
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
@@ -43,7 +43,7 @@ const ProductDetails = () => {
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
   const product = useSelector(selectProductById);
-  const user = useSelector(selectLoggedInUser)
+  const user = useSelector(selectUserInfo)
   const dispatch = useDispatch();
   const params = useParams();
 
