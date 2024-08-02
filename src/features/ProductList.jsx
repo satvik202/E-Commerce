@@ -45,8 +45,6 @@ const sortOptions = [
   { name: "Price: High to Low", sort: "-price", current: false },
 ];
 
-
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -118,7 +116,6 @@ const ProductList = () => {
   const brands = useSelector(selectBrands);
   const categories = useSelector(selectCategories);
 
-
   const filters = [
     {
       id: "category",
@@ -159,13 +156,13 @@ const ProductList = () => {
     setSort(sort);
   };
 
-  const handlePage = ( page) => {
+  const handlePage = (page) => {
     setPage(page);
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(fetchBrandsAsync());
-    dispatch(fetchCategoriesAsync())
+    dispatch(fetchCategoriesAsync());
   }, []);
 
   useEffect(() => {
@@ -173,9 +170,9 @@ const ProductList = () => {
     dispatch(fetchProductsByFiltersAsync({ filter, sort, pagination }));
   }, [dispatch, filter, sort, page]);
 
-  useEffect(()=>{
+  useEffect(() => {
     setPage(1);
-  }, [totalItems, sort])
+  }, [totalItems, sort]);
 
   return (
     <div className="bg-white">
@@ -427,6 +424,13 @@ const ProductList = () => {
                                 </p>
                               </div>
                             </div>
+                            {product.deleted && (
+                              <div>
+                                <p className="text-sm text-red-400">
+                                  product deleted
+                                </p>
+                              </div>
+                            )}
                           </div>
                         </Link>
                       ))}
@@ -454,18 +458,24 @@ const Pagination = ({ handlePage, page, setPage, totalItems }) => {
   return (
     <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
       <div className="flex flex-1 justify-between sm:hidden">
-        {page > 1 && <div
-          onClick={(e)=> handlePage(page-1)}
-          className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer"
-        >
-          Previous
-        </div>}
-        {page< Math.ceil(totalItems / ITEMS_PER_PAGE) && <div
-          onClick={(e)=> handlePage(page+1)}
-          className={`relative ${page === 1 ? "ml-auto" : "ml-3"} inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer`}
-        >
-          Next
-        </div>}
+        {page > 1 && (
+          <div
+            onClick={(e) => handlePage(page - 1)}
+            className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer"
+          >
+            Previous
+          </div>
+        )}
+        {page < Math.ceil(totalItems / ITEMS_PER_PAGE) && (
+          <div
+            onClick={(e) => handlePage(page + 1)}
+            className={`relative ${
+              page === 1 ? "ml-auto" : "ml-3"
+            } inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer`}
+          >
+            Next
+          </div>
+        )}
       </div>
       <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
         <div>
@@ -488,13 +498,15 @@ const Pagination = ({ handlePage, page, setPage, totalItems }) => {
             aria-label="Pagination"
             className="isolate inline-flex -space-x-px rounded-md shadow-sm"
           >
-            {page> 1 && <div
-              onClick={(e)=> handlePage(page-1)}
-              className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-            >
-              <span className="sr-only">Previous</span>
-              <ChevronLeftIcon aria-hidden="true" className="h-5 w-5" />
-            </div>}
+            {page > 1 && (
+              <div
+                onClick={(e) => handlePage(page - 1)}
+                className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+              >
+                <span className="sr-only">Previous</span>
+                <ChevronLeftIcon aria-hidden="true" className="h-5 w-5" />
+              </div>
+            )}
             {/* Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" */}
             {Array.from({ length: Math.ceil(totalItems / ITEMS_PER_PAGE) }).map(
               (el, index) => (
@@ -504,8 +516,8 @@ const Pagination = ({ handlePage, page, setPage, totalItems }) => {
                   aria-current="page"
                   className={`relative cursor-pointer z-10 inline-flex items-center ${
                     index + 1 === page
-                      ? 'bg-indigo-600 text-white'
-                      : 'text-gray-400'
+                      ? "bg-indigo-600 text-white"
+                      : "text-gray-400"
                   } px-4 py-2 text-sm font-semibold  focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600`}
                 >
                   {index + 1}
@@ -513,13 +525,15 @@ const Pagination = ({ handlePage, page, setPage, totalItems }) => {
               )
             )}
 
-            {page< Math.ceil(totalItems / ITEMS_PER_PAGE) && <div
-              onClick={(e)=>  handlePage(page+1)}
-              className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-            >
-              <span className="sr-only">Next</span>
-              <ChevronRightIcon aria-hidden="true" className="h-5 w-5" />
-            </div>}
+            {page < Math.ceil(totalItems / ITEMS_PER_PAGE) && (
+              <div
+                onClick={(e) => handlePage(page + 1)}
+                className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+              >
+                <span className="sr-only">Next</span>
+                <ChevronRightIcon aria-hidden="true" className="h-5 w-5" />
+              </div>
+            )}
           </nav>
         </div>
       </div>

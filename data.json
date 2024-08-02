@@ -305,8 +305,8 @@
       "title": "Calvin Klein CK One",
       "description": "CK One by Calvin Klein is a classic unisex fragrance, known for its fresh and clean scent. It's a versatile fragrance suitable for everyday wear.",
       "category": "fragrances",
-      "price": 49.99,
-      "discountPercentage": 0.32,
+      "price": 51,
+      "discountPercentage": 1,
       "rating": 4.85,
       "stock": 17,
       "tags": [
@@ -358,7 +358,8 @@
       "images": [
         "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/1.png",
         "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/2.png",
-        "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/3.png"
+        "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/3.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/thumbnail.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Calvin%20Klein%20CK%20One/thumbnail.png"
     },
@@ -9448,7 +9449,8 @@
       "id": "8c27",
       "email": "test@test.com",
       "password": "Test@123",
-      "addresses": []
+      "addresses": [],
+      "role": "admin"
     },
     {
       "id": "72b2",
@@ -9464,7 +9466,8 @@
           "state": "delhi",
           "pinCode": "110089"
         }
-      ]
+      ],
+      "role": "user"
     },
     {
       "id": "3732",
@@ -9489,7 +9492,8 @@
           "state": "delhi",
           "pinCode": "220011"
         }
-      ]
+      ],
+      "role": "user"
     }
   ],
   "cart": [

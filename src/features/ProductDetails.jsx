@@ -3,7 +3,7 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
 import {
   selectProductById,
-  fetchAllProductByIdAsync,
+  fetchProductByIdAsync,
 } from "../utils/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -55,7 +55,7 @@ const ProductDetails = () => {
   }
 
   useEffect(() => {
-    dispatch(fetchAllProductByIdAsync(params.id));
+    dispatch(fetchProductByIdAsync(params.id));
   }, [dispatch, params.id]);
   return (
     <div className="bg-white">
@@ -111,28 +111,28 @@ const ProductDetails = () => {
               />
             </div>
             {/* <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
-              <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+              {product.images.length>=2 && <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
                 <img
                   src={product.images[1]}
                   alt={product.title}
                   className="h-full w-full object-cover object-center"
                 />
-              </div>
-              <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+              </div>}
+              {product.images.length>=3 && <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
                 <img
                   src={product.images[2]}
                   alt={product.title}
                   className="h-full w-full object-cover object-center"
                 />
-              </div>
+              </div>}
             </div>
-            <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
+            {product.images.length>=4 && <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
               <img
                 src={product.images[3]}
                 alt={product.title}
                 className="h-full w-full object-cover object-center"
               />
-            </div> */}
+            </div>} */}
           </div>
 
           {/* Product info */}
