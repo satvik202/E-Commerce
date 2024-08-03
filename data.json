@@ -9449,7 +9449,17 @@
       "id": "8c27",
       "email": "test@test.com",
       "password": "Test@123",
-      "addresses": [],
+      "addresses": [
+        {
+          "name": "Test",
+          "email": "test@test.com",
+          "phone": "8888888888",
+          "street": "AAP Headquarters",
+          "city": "delhi",
+          "state": "delhi",
+          "pinCode": "101010"
+        }
+      ],
       "role": "admin"
     },
     {
@@ -9496,134 +9506,7 @@
       "role": "user"
     }
   ],
-  "cart": [
-    {
-      "id": "ac6b",
-      "title": "Eyeshadow Palette with Mirror",
-      "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
-      "category": "beauty",
-      "price": 19.99,
-      "discountPercentage": 5.5,
-      "rating": 3.28,
-      "stock": 44,
-      "tags": [
-        "beauty",
-        "eyeshadow"
-      ],
-      "brand": "Glamour Beauty",
-      "sku": "MVCFH27F",
-      "weight": 3,
-      "dimensions": {
-        "width": 12.42,
-        "height": 8.63,
-        "depth": 29.13
-      },
-      "warrantyInformation": "1 year warranty",
-      "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 4,
-          "comment": "Very satisfied!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "Liam Garcia",
-          "reviewerEmail": "liam.garcia@x.dummyjson.com"
-        },
-        {
-          "rating": 1,
-          "comment": "Very disappointed!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "Nora Russell",
-          "reviewerEmail": "nora.russell@x.dummyjson.com"
-        },
-        {
-          "rating": 5,
-          "comment": "Highly impressed!",
-          "date": "2024-05-23T08:56:21.618Z",
-          "reviewerName": "Elena Baker",
-          "reviewerEmail": "elena.baker@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "30 days return policy",
-      "minimumOrderQuantity": 32,
-      "meta": {
-        "createdAt": "2024-05-23T08:56:21.618Z",
-        "updatedAt": "2024-05-23T08:56:21.618Z",
-        "barcode": "2817839095220",
-        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png",
-      "quantity": 1,
-      "user": "3732"
-    },
-    {
-      "id": "c2a0",
-      "title": "Annibale Colombo Sofa",
-      "description": "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.",
-      "category": "furniture",
-      "price": 2499.99,
-      "discountPercentage": 18.54,
-      "rating": 3.08,
-      "stock": 16,
-      "tags": [
-        "furniture",
-        "sofas"
-      ],
-      "brand": "Annibale Colombo",
-      "sku": "LUU95CQP",
-      "weight": 3,
-      "dimensions": {
-        "width": 20.97,
-        "height": 19.11,
-        "depth": 25.81
-      },
-      "warrantyInformation": "1 month warranty",
-      "shippingInformation": "Ships overnight",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 5,
-          "comment": "Very satisfied!",
-          "date": "2024-05-23T08:56:21.620Z",
-          "reviewerName": "Tyler Davis",
-          "reviewerEmail": "tyler.davis@x.dummyjson.com"
-        },
-        {
-          "rating": 5,
-          "comment": "Excellent quality!",
-          "date": "2024-05-23T08:56:21.620Z",
-          "reviewerName": "Hannah Robinson",
-          "reviewerEmail": "hannah.robinson@x.dummyjson.com"
-        },
-        {
-          "rating": 3,
-          "comment": "Waste of money!",
-          "date": "2024-05-23T08:56:21.620Z",
-          "reviewerName": "Madison Collins",
-          "reviewerEmail": "madison.collins@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "7 days return policy",
-      "minimumOrderQuantity": 1,
-      "meta": {
-        "createdAt": "2024-05-23T08:56:21.620Z",
-        "updatedAt": "2024-05-23T08:56:21.620Z",
-        "barcode": "0426785817074",
-        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png",
-        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png",
-        "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/3.png"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png",
-      "quantity": 1,
-      "user": "72b2"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "id": "b265",
@@ -9790,7 +9673,7 @@
         "state": "UK",
         "pinCode": "110089"
       },
-      "status": "pending"
+      "status": "dispatched"
     },
     {
       "id": "381a",
@@ -10423,6 +10306,1057 @@
         "city": "rohini",
         "state": "delhi",
         "pinCode": "110089"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "e272",
+      "items": [
+        {
+          "id": "c2a0",
+          "title": "Annibale Colombo Sofa",
+          "description": "The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.",
+          "category": "furniture",
+          "price": 2499.99,
+          "discountPercentage": 18.54,
+          "rating": 3.08,
+          "stock": 16,
+          "tags": [
+            "furniture",
+            "sofas"
+          ],
+          "brand": "Annibale Colombo",
+          "sku": "LUU95CQP",
+          "weight": 3,
+          "dimensions": {
+            "width": 20.97,
+            "height": 19.11,
+            "depth": 25.81
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships overnight",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Tyler Davis",
+              "reviewerEmail": "tyler.davis@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Excellent quality!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Hannah Robinson",
+              "reviewerEmail": "hannah.robinson@x.dummyjson.com"
+            },
+            {
+              "rating": 3,
+              "comment": "Waste of money!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Madison Collins",
+              "reviewerEmail": "madison.collins@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "0426785817074",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/1.png",
+            "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/2.png",
+            "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Annibale%20Colombo%20Sofa/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        },
+        {
+          "id": "9de4",
+          "title": "Lemon",
+          "description": "Zesty and tangy lemons, versatile for cooking, baking, or making refreshing beverages.",
+          "category": "groceries",
+          "price": 0.79,
+          "discountPercentage": 17.81,
+          "rating": 4.25,
+          "stock": 0,
+          "tags": [
+            "fruits"
+          ],
+          "sku": "J074TE3H",
+          "weight": 10,
+          "dimensions": {
+            "width": 25.97,
+            "height": 27.47,
+            "depth": 6.31
+          },
+          "warrantyInformation": "3 year warranty",
+          "shippingInformation": "Ships in 1 week",
+          "availabilityStatus": "Out of Stock",
+          "reviews": [
+            {
+              "rating": 4,
+              "comment": "Highly recommended!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Lucas Gray",
+              "reviewerEmail": "lucas.gray@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Henry Hill",
+              "reviewerEmail": "henry.hill@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Awesome product!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Elena Long",
+              "reviewerEmail": "elena.long@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "90 days return policy",
+          "minimumOrderQuantity": 1,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "6364178053480",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/groceries/Lemon/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Lemon/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        },
+        {
+          "id": "7228",
+          "title": "Dior J'adore",
+          "description": "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.",
+          "category": "fragrances",
+          "price": 89.99,
+          "discountPercentage": 17.44,
+          "rating": 3.31,
+          "stock": 91,
+          "tags": [
+            "fragrances",
+            "perfumes"
+          ],
+          "brand": "Dior",
+          "sku": "E70NB03B",
+          "weight": 10,
+          "dimensions": {
+            "width": 21.51,
+            "height": 7,
+            "depth": 26.51
+          },
+          "warrantyInformation": "Lifetime warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Fast shipping!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Zoe Nicholson",
+              "reviewerEmail": "zoe.nicholson@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Excellent quality!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Addison Wright",
+              "reviewerEmail": "addison.wright@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Would buy again!",
+              "date": "2024-05-23T08:56:21.619Z",
+              "reviewerName": "Clara Berry",
+              "reviewerEmail": "clara.berry@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 8,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.619Z",
+            "updatedAt": "2024-05-23T08:56:21.619Z",
+            "barcode": "0887083199279",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/1.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/2.png",
+            "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        },
+        {
+          "id": "58cc",
+          "title": "Soft Drinks",
+          "description": "Assorted soft drinks in various flavors, perfect for refreshing beverages.",
+          "category": "groceries",
+          "price": 1.99,
+          "discountPercentage": 1.88,
+          "rating": 4.59,
+          "stock": 78,
+          "tags": [
+            "beverages"
+          ],
+          "sku": "I1ZNSLXJ",
+          "weight": 9,
+          "dimensions": {
+            "width": 15.73,
+            "height": 24.93,
+            "depth": 27.19
+          },
+          "warrantyInformation": "1 year warranty",
+          "shippingInformation": "Ships in 3-5 business days",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 3,
+              "comment": "Very dissatisfied!",
+              "date": "2024-05-23T08:56:21.621Z",
+              "reviewerName": "Ella Cook",
+              "reviewerEmail": "ella.cook@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Highly impressed!",
+              "date": "2024-05-23T08:56:21.621Z",
+              "reviewerName": "Liam Garcia",
+              "reviewerEmail": "liam.garcia@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Awesome product!",
+              "date": "2024-05-23T08:56:21.621Z",
+              "reviewerName": "Autumn Gomez",
+              "reviewerEmail": "autumn.gomez@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "90 days return policy",
+          "minimumOrderQuantity": 41,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.621Z",
+            "updatedAt": "2024-05-23T08:56:21.621Z",
+            "barcode": "3523564932164",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/groceries/Soft%20Drinks/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Soft%20Drinks/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        }
+      ],
+      "totalAmmount": 2113.389487,
+      "totalItemCount": 4,
+      "user": {
+        "id": "72b2",
+        "email": "dummy@gmail.com",
+        "password": "Dummy@123",
+        "addresses": [
+          {
+            "name": "Abhishek R",
+            "email": "dummy@gmail.com",
+            "phone": "1212121212",
+            "street": "a-19/16",
+            "city": "rohini",
+            "state": "delhi",
+            "pinCode": "110089"
+          }
+        ],
+        "role": "user"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Abhishek R",
+        "email": "dummy@gmail.com",
+        "phone": "1212121212",
+        "street": "a-19/16",
+        "city": "rohini",
+        "state": "delhi",
+        "pinCode": "110089"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "5c19",
+      "items": [
+        {
+          "id": "866a",
+          "title": "Eggs",
+          "description": "Fresh eggs, a versatile ingredient for baking, cooking, or breakfast.",
+          "category": "groceries",
+          "price": 2.99,
+          "discountPercentage": 5.8,
+          "rating": 4.46,
+          "stock": 10,
+          "tags": [
+            "dairy"
+          ],
+          "sku": "YA617RI7",
+          "weight": 4,
+          "dimensions": {
+            "width": 12.3,
+            "height": 10.99,
+            "depth": 15.53
+          },
+          "warrantyInformation": "3 year warranty",
+          "shippingInformation": "Ships overnight",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Mateo Perez",
+              "reviewerEmail": "mateo.perez@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Very happy with my purchase!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Cameron Perez",
+              "reviewerEmail": "cameron.perez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very happy with my purchase!",
+              "date": "2024-05-23T08:56:21.620Z",
+              "reviewerName": "Aurora Barnes",
+              "reviewerEmail": "aurora.barnes@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 43,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.620Z",
+            "updatedAt": "2024-05-23T08:56:21.620Z",
+            "barcode": "7095702028776",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/groceries/Eggs/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Eggs/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        }
+      ],
+      "totalAmmount": 2.81658,
+      "totalItemCount": 1,
+      "user": {
+        "id": "72b2",
+        "email": "dummy@gmail.com",
+        "password": "Dummy@123",
+        "addresses": [
+          {
+            "name": "Abhishek R",
+            "email": "dummy@gmail.com",
+            "phone": "1212121212",
+            "street": "a-19/16",
+            "city": "rohini",
+            "state": "delhi",
+            "pinCode": "110089"
+          }
+        ],
+        "role": "user"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Abhishek R",
+        "email": "dummy@gmail.com",
+        "phone": "1212121212",
+        "street": "a-19/16",
+        "city": "rohini",
+        "state": "delhi",
+        "pinCode": "110089"
+      },
+      "status": "dispatched"
+    },
+    {
+      "id": "c05b",
+      "items": [
+        {
+          "id": "b6b7",
+          "title": "Silver Pot With Glass Cap",
+          "description": "The Silver Pot with Glass Cap is a stylish and functional cookware item for boiling, simmering, and preparing delicious meals. Its glass cap allows you to monitor cooking progress.",
+          "category": "kitchen-accessories",
+          "price": 39.99,
+          "discountPercentage": 4.57,
+          "rating": 3.86,
+          "stock": 37,
+          "tags": [
+            "cookware",
+            "pots"
+          ],
+          "sku": "BSFNUA3V",
+          "weight": 9,
+          "dimensions": {
+            "width": 9.58,
+            "height": 25.84,
+            "depth": 26.13
+          },
+          "warrantyInformation": "Lifetime warranty",
+          "shippingInformation": "Ships in 1 week",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Highly impressed!",
+              "date": "2024-05-23T08:56:21.622Z",
+              "reviewerName": "Addison Wright",
+              "reviewerEmail": "addison.wright@x.dummyjson.com"
+            },
+            {
+              "rating": 3,
+              "comment": "Not worth the price!",
+              "date": "2024-05-23T08:56:21.622Z",
+              "reviewerName": "Ava Taylor",
+              "reviewerEmail": "ava.taylor@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Excellent quality!",
+              "date": "2024-05-23T08:56:21.622Z",
+              "reviewerName": "Avery Scott",
+              "reviewerEmail": "avery.scott@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 19,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.622Z",
+            "updatedAt": "2024-05-23T08:56:21.622Z",
+            "barcode": "6630860592730",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/kitchen-accessories/Silver%20Pot%20With%20Glass%20Cap/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/kitchen-accessories/Silver%20Pot%20With%20Glass%20Cap/thumbnail.png",
+          "quantity": 1,
+          "user": "72b2"
+        }
+      ],
+      "totalAmmount": 38.162457,
+      "totalItemCount": 1,
+      "user": {
+        "id": "72b2",
+        "email": "dummy@gmail.com",
+        "password": "Dummy@123",
+        "addresses": [
+          {
+            "name": "Abhishek R",
+            "email": "dummy@gmail.com",
+            "phone": "1212121212",
+            "street": "a-19/16",
+            "city": "rohini",
+            "state": "delhi",
+            "pinCode": "110089"
+          }
+        ],
+        "role": "user"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Abhishek R",
+        "email": "dummy@gmail.com",
+        "phone": "1212121212",
+        "street": "a-19/16",
+        "city": "rohini",
+        "state": "delhi",
+        "pinCode": "110089"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "ec54",
+      "items": [
+        {
+          "id": "8ac9",
+          "title": "Eyeshadow Palette with Mirror",
+          "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+          "category": "beauty",
+          "price": 19.99,
+          "discountPercentage": 5.5,
+          "rating": 3.28,
+          "stock": 44,
+          "tags": [
+            "beauty",
+            "eyeshadow"
+          ],
+          "brand": "Glamour Beauty",
+          "sku": "MVCFH27F",
+          "weight": 3,
+          "dimensions": {
+            "width": 12.42,
+            "height": 8.63,
+            "depth": 29.13
+          },
+          "warrantyInformation": "1 year warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 4,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Liam Garcia",
+              "reviewerEmail": "liam.garcia@x.dummyjson.com"
+            },
+            {
+              "rating": 1,
+              "comment": "Very disappointed!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nora Russell",
+              "reviewerEmail": "nora.russell@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Highly impressed!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Elena Baker",
+              "reviewerEmail": "elena.baker@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 32,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "2817839095220",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png",
+          "quantity": 4,
+          "user": "72b2"
+        }
+      ],
+      "totalAmmount": 75.56219999999999,
+      "totalItemCount": 4,
+      "user": {
+        "id": "72b2",
+        "email": "dummy@gmail.com",
+        "password": "Dummy@123",
+        "addresses": [
+          {
+            "name": "Abhishek R",
+            "email": "dummy@gmail.com",
+            "phone": "1212121212",
+            "street": "a-19/16",
+            "city": "rohini",
+            "state": "delhi",
+            "pinCode": "110089"
+          }
+        ],
+        "role": "user"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Abhishek R",
+        "email": "dummy@gmail.com",
+        "phone": "1212121212",
+        "street": "a-19/16",
+        "city": "rohini",
+        "state": "delhi",
+        "pinCode": "110089"
+      },
+      "status": "delivered"
+    },
+    {
+      "id": "6c6b",
+      "items": [
+        {
+          "id": "ac6b",
+          "title": "Eyeshadow Palette with Mirror",
+          "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
+          "category": "beauty",
+          "price": 19.99,
+          "discountPercentage": 5.5,
+          "rating": 3.28,
+          "stock": 44,
+          "tags": [
+            "beauty",
+            "eyeshadow"
+          ],
+          "brand": "Glamour Beauty",
+          "sku": "MVCFH27F",
+          "weight": 3,
+          "dimensions": {
+            "width": 12.42,
+            "height": 8.63,
+            "depth": 29.13
+          },
+          "warrantyInformation": "1 year warranty",
+          "shippingInformation": "Ships in 2 weeks",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 4,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Liam Garcia",
+              "reviewerEmail": "liam.garcia@x.dummyjson.com"
+            },
+            {
+              "rating": 1,
+              "comment": "Very disappointed!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nora Russell",
+              "reviewerEmail": "nora.russell@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Highly impressed!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Elena Baker",
+              "reviewerEmail": "elena.baker@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 32,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "2817839095220",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png",
+          "quantity": 1,
+          "user": "3732"
+        },
+        {
+          "id": "928c",
+          "title": "Potatoes",
+          "description": "Versatile and starchy potatoes, great for roasting, mashing, or as a side dish.",
+          "category": "groceries",
+          "price": 2.29,
+          "discountPercentage": 4.05,
+          "rating": 3.82,
+          "stock": 8,
+          "tags": [
+            "vegetables"
+          ],
+          "sku": "W4NOBW45",
+          "weight": 9,
+          "dimensions": {
+            "width": 20,
+            "height": 6.44,
+            "depth": 20.07
+          },
+          "warrantyInformation": "5 year warranty",
+          "shippingInformation": "Ships in 1-2 business days",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 5,
+              "comment": "Very pleased!",
+              "date": "2024-05-23T08:56:21.621Z",
+              "reviewerName": "Sophia Brown",
+              "reviewerEmail": "sophia.brown@x.dummyjson.com"
+            },
+            {
+              "rating": 1,
+              "comment": "Would not recommend!",
+              "date": "2024-05-23T08:56:21.621Z",
+              "reviewerName": "Gabriel Mitchell",
+              "reviewerEmail": "gabriel.mitchell@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Awesome product!",
+              "date": "2024-05-23T08:56:21.621Z",
+              "reviewerName": "Elijah Stewart",
+              "reviewerEmail": "elijah.stewart@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 29,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.621Z",
+            "updatedAt": "2024-05-23T08:56:21.621Z",
+            "barcode": "1374727655057",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/groceries/Potatoes/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Potatoes/thumbnail.png",
+          "quantity": 1,
+          "user": "3732"
+        }
+      ],
+      "totalAmmount": 21.087804999999996,
+      "totalItemCount": 2,
+      "user": {
+        "id": "3732",
+        "email": "rohini@gmail.com",
+        "password": "Rohini@123",
+        "addresses": [
+          {
+            "name": "Shubham Pandey",
+            "email": "rohini@gmail.com",
+            "phone": "1122334455",
+            "street": "ak47",
+            "city": "london",
+            "state": "UK",
+            "pinCode": "110089"
+          },
+          {
+            "name": "Shubham Pandey",
+            "email": "rohini@gmail.com",
+            "phone": "1122334455",
+            "street": "hgvuyyv",
+            "city": "delhi",
+            "state": "delhi",
+            "pinCode": "220011"
+          }
+        ],
+        "role": "user"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Shubham Pandey",
+        "email": "rohini@gmail.com",
+        "phone": "1122334455",
+        "street": "hgvuyyv",
+        "city": "delhi",
+        "state": "delhi",
+        "pinCode": "220011"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "2aa6",
+      "items": [
+        {
+          "id": "e87b",
+          "title": "Blue & Black Check Shirt",
+          "description": "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
+          "category": "mens-shirts",
+          "price": 29.99,
+          "discountPercentage": 1.41,
+          "rating": 4.19,
+          "stock": 44,
+          "tags": [
+            "clothing",
+            "men's shirts"
+          ],
+          "brand": "Fashion Trends",
+          "sku": "6RJDTVCU",
+          "weight": 6,
+          "dimensions": {
+            "width": 17.25,
+            "height": 27.31,
+            "depth": 20.88
+          },
+          "warrantyInformation": "No warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 4,
+              "comment": "Highly recommended!",
+              "date": "2024-05-23T08:56:21.623Z",
+              "reviewerName": "Mason Parker",
+              "reviewerEmail": "mason.parker@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Highly impressed!",
+              "date": "2024-05-23T08:56:21.623Z",
+              "reviewerName": "Avery Perez",
+              "reviewerEmail": "avery.perez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Fast shipping!",
+              "date": "2024-05-23T08:56:21.623Z",
+              "reviewerName": "Nathan Reed",
+              "reviewerEmail": "nathan.reed@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "7 days return policy",
+          "minimumOrderQuantity": 4,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.623Z",
+            "updatedAt": "2024-05-23T08:56:21.623Z",
+            "barcode": "8840720880947",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/1.png",
+            "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/2.png",
+            "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/3.png",
+            "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/4.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/thumbnail.png",
+          "quantity": 1,
+          "user": "3732"
+        }
+      ],
+      "totalAmmount": 29.567141,
+      "totalItemCount": 1,
+      "user": {
+        "id": "3732",
+        "email": "rohini@gmail.com",
+        "password": "Rohini@123",
+        "addresses": [
+          {
+            "name": "Shubham Pandey",
+            "email": "rohini@gmail.com",
+            "phone": "1122334455",
+            "street": "ak47",
+            "city": "london",
+            "state": "UK",
+            "pinCode": "110089"
+          },
+          {
+            "name": "Shubham Pandey",
+            "email": "rohini@gmail.com",
+            "phone": "1122334455",
+            "street": "hgvuyyv",
+            "city": "delhi",
+            "state": "delhi",
+            "pinCode": "220011"
+          }
+        ],
+        "role": "user"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Shubham Pandey",
+        "email": "rohini@gmail.com",
+        "phone": "1122334455",
+        "street": "ak47",
+        "city": "london",
+        "state": "UK",
+        "pinCode": "110089"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "29cb",
+      "items": [
+        {
+          "id": "6646",
+          "title": "Apple Watch Series 4 Gold",
+          "description": "The Apple Watch Series 4 in Gold is a stylish and advanced smartwatch with features like heart rate monitoring, fitness tracking, and a beautiful Retina display.",
+          "category": "mobile-accessories",
+          "price": 349.99,
+          "discountPercentage": 5.14,
+          "rating": 4.42,
+          "stock": 68,
+          "tags": [
+            "electronics",
+            "smartwatches"
+          ],
+          "brand": "Apple",
+          "sku": "ZNXPOEPT",
+          "weight": 6,
+          "dimensions": {
+            "width": 8.96,
+            "height": 28.26,
+            "depth": 26.46
+          },
+          "warrantyInformation": "6 months warranty",
+          "shippingInformation": "Ships in 1-2 business days",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 3,
+              "comment": "Would not buy again!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Ellie Stewart",
+              "reviewerEmail": "ellie.stewart@x.dummyjson.com"
+            },
+            {
+              "rating": 1,
+              "comment": "Poor quality!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Grayson Coleman",
+              "reviewerEmail": "grayson.coleman@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Fast shipping!",
+              "date": "2024-05-23T08:56:21.624Z",
+              "reviewerName": "Alice Smith",
+              "reviewerEmail": "alice.smith@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "60 days return policy",
+          "minimumOrderQuantity": 2,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.624Z",
+            "updatedAt": "2024-05-23T08:56:21.624Z",
+            "barcode": "4492482209885",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Watch%20Series%204%20Gold/1.png",
+            "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Watch%20Series%204%20Gold/2.png",
+            "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Watch%20Series%204%20Gold/3.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Watch%20Series%204%20Gold/thumbnail.png",
+          "quantity": 1,
+          "user": "3732"
+        }
+      ],
+      "totalAmmount": 332.000514,
+      "totalItemCount": 1,
+      "user": {
+        "id": "3732",
+        "email": "rohini@gmail.com",
+        "password": "Rohini@123",
+        "addresses": [
+          {
+            "name": "Shubham Pandey",
+            "email": "rohini@gmail.com",
+            "phone": "1122334455",
+            "street": "ak47",
+            "city": "london",
+            "state": "UK",
+            "pinCode": "110089"
+          },
+          {
+            "name": "Shubham Pandey",
+            "email": "rohini@gmail.com",
+            "phone": "1122334455",
+            "street": "hgvuyyv",
+            "city": "delhi",
+            "state": "delhi",
+            "pinCode": "220011"
+          }
+        ],
+        "role": "user"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Shubham Pandey",
+        "email": "rohini@gmail.com",
+        "phone": "1122334455",
+        "street": "ak47",
+        "city": "london",
+        "state": "UK",
+        "pinCode": "110089"
+      },
+      "status": "pending"
+    },
+    {
+      "id": "d15d",
+      "items": [
+        {
+          "id": "449f",
+          "title": "Essence Mascara Lash Princess",
+          "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          "category": "beauty",
+          "price": 9.99,
+          "discountPercentage": 7.17,
+          "rating": 4.94,
+          "stock": 5,
+          "tags": [
+            "beauty",
+            "mascara"
+          ],
+          "brand": "Essence",
+          "sku": "RCH45Q1A",
+          "weight": 2,
+          "dimensions": {
+            "width": 23.17,
+            "height": 14.43,
+            "depth": 28.01
+          },
+          "warrantyInformation": "1 month warranty",
+          "shippingInformation": "Ships in 1 month",
+          "availabilityStatus": "Low Stock",
+          "reviews": [
+            {
+              "rating": 2,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "John Doe",
+              "reviewerEmail": "john.doe@x.dummyjson.com"
+            },
+            {
+              "rating": 2,
+              "comment": "Not as described!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Nolan Gonzalez",
+              "reviewerEmail": "nolan.gonzalez@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very satisfied!",
+              "date": "2024-05-23T08:56:21.618Z",
+              "reviewerName": "Scarlett Wright",
+              "reviewerEmail": "scarlett.wright@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "30 days return policy",
+          "minimumOrderQuantity": 24,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.618Z",
+            "updatedAt": "2024-05-23T08:56:21.618Z",
+            "barcode": "9164035109868",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+          "quantity": 1,
+          "user": "8c27"
+        }
+      ],
+      "totalAmmount": 9.273717,
+      "totalItemCount": 1,
+      "user": {
+        "id": "8c27",
+        "email": "test@test.com",
+        "password": "Test@123",
+        "addresses": [
+          {
+            "name": "Test",
+            "email": "test@test.com",
+            "phone": "8888888888",
+            "street": "AAP Headquarters",
+            "city": "delhi",
+            "state": "delhi",
+            "pinCode": "101010"
+          }
+        ],
+        "role": "admin"
+      },
+      "paymentMethod": "cash",
+      "selectedAddress": {
+        "name": "Test",
+        "email": "test@test.com",
+        "phone": "8888888888",
+        "street": "AAP Headquarters",
+        "city": "delhi",
+        "state": "delhi",
+        "pinCode": "101010"
       },
       "status": "pending"
     }

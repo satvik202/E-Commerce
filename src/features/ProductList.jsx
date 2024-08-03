@@ -151,7 +151,7 @@ const ProductList = () => {
   };
 
   const handleSort = (e, option) => {
-    const sort = { _sort: option.sort, _order: option.order };
+    const sort = { _sort: option.sort };
     // console.log({sort});
     setSort(sort);
   };
@@ -454,7 +454,7 @@ const ProductList = () => {
   );
 };
 
-const Pagination = ({ handlePage, page, setPage, totalItems }) => {
+export const Pagination = ({ handlePage, page, setPage, totalItems }) => {
   return (
     <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
       <div className="flex flex-1 justify-between sm:hidden">

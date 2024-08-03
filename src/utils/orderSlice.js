@@ -3,10 +3,10 @@ import { createOrder, fetchAllOrders, updateOrder } from "../features/orderAPI";
 
 
 const initialState = {
-    orders : [],
     status : 'idle',
     currentOrder : null,
-    totalOrders : 0
+    totalOrders : 0,
+    orders : []
 }
 
 export const createOrderAsync = createAsyncThunk(
@@ -18,7 +18,7 @@ export const createOrderAsync = createAsyncThunk(
 );
 export const fetchAllOrdersAsync = createAsyncThunk(
     'orders/fetchAllOrders',
-    async ({sort,pagination}) => {
+    async ({sort, pagination}) => {
       const response = await fetchAllOrders(sort,pagination);
       return response.data;
     }
@@ -74,7 +74,11 @@ export const {resetOrder} = orderSlice.actions
 
 export const selectCurrentOrder = (state)=>state.order.currentOrder
 export const selectTotalOrders = (state)=>state.order.totalOrders
-export const selectOrders = (state)=>state.order.orders
+
+
+export const selectOrders = (state)=> state?.order?.orders
+
+
 
 export default orderSlice.reducer
 

@@ -20,7 +20,7 @@ export const updateOrder = async (order)=> {
         resolve({ data });
     })
 }
-export const fetchAllOrders = async (sort,pagination)=> {
+export const fetchAllOrders = async (sort, pagination)=> {
     let queryString=""
     for (let key in sort) {
         queryString += `${key}=${sort[key]}&`;
@@ -29,12 +29,14 @@ export const fetchAllOrders = async (sort,pagination)=> {
     for (let key in pagination) {
         queryString += `${key}=${pagination[key]}&`;
       }
+      console.log(queryString, "inside fetchAllOrders")
     return new Promise(async (resolve) => {
-        const response = await fetch("http://localhost:3000/orders&"+queryString)
+        const response = await fetch("http://localhost:3000/orders?"+queryString)
         const data = await response.json();
-        // console.log(data);
-        const totalOrders = response.headers.get('X-Total-Count')
-        resolve({ data : {orders : data, totalOrders : +totalOrders} });
+        console.log(data);
+        const totalOrders = data.items;
+        const orders = data.data;
+        resolve({ data : {orders : orders, totalOrders : +totalOrders} });
     })
 
 }
