@@ -7,8 +7,11 @@ import {
 } from "../utils/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { addToCartAsync } from "../utils/cartSlice";
+import { addToCartAsync, selectCart } from "../utils/cartSlice";
 import { selectUserInfo } from "../utils/userSlice";
+
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const colors = [
   { name: "White", class: "bg-white", selectedClass: "ring-gray-400" },
@@ -44,14 +47,40 @@ const ProductDetails = () => {
   const [selectedSize, setSelectedSize] = useState(sizes[2]);
   const product = useSelector(selectProductById);
   const user = useSelector(selectUserInfo)
+  const items = useSelector(selectCart)
   const dispatch = useDispatch();
   const params = useParams();
 
+  const notify = (msg)=>toast(`${msg}`, {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    transition: Bounce,
+    });
+
   const handleAddToCart = (e)=>{
     e.preventDefault()
-    const newItem = {...product,quantity: 1, user : user.id}
-    delete newItem['id']
-    dispatch(addToCartAsync(newItem))
+    if (items.findIndex((item) => item.productId === product.id) < 0) {
+      console.log({ items, product });
+      const newItem = {
+        ...product,
+        productId: product.id,
+        quantity: 1,
+        user: user.id,
+      };
+      delete newItem['id'];
+      dispatch(addToCartAsync(newItem));
+      notify("Item is added to the cart")
+      // TODO: it will be based on server response of backend
+      // alert.error('Item added to Cart');
+    } else {
+      notify("item already added")
+    }
   }
 
   useEffect(() => {
@@ -59,6 +88,7 @@ const ProductDetails = () => {
   }, [dispatch, params.id]);
   return (
     <div className="bg-white">
+      <ToastContainer/>
       {product && (
         <div className="pt-6">
           <nav aria-label="Breadcrumb">

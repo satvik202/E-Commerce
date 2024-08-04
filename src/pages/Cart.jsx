@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import { deleteItemFromCartAsync, selectCart, updateCartAsync } from "../utils/cartSlice";
-
+import Modal from "../features/Modal"
+import { useState } from "react";
 const Cart = () => {
+  const [openModal, setOpenModal] = useState(null);
   const items = useSelector(selectCart)
   const dispatch = useDispatch()
   const totalAmmount = items.reduce((amount, item)=> amount+ item.price*(1-item.discountPercentage/100)*item.quantity, 0);
@@ -13,13 +15,15 @@ const Cart = () => {
     dispatch(updateCartAsync({...product, quantity: +e.target.value}))
   }
 
-  const handleRemove = (id)=>{
+  const handleRemove = (e, id)=>{
     dispatch(deleteItemFromCartAsync(id))
   }
 
   return (
     <>
+    {<Modal/>}
     {!items.length && <Navigate to='/' replace={true}></Navigate>}
+    
       <div className="mx-auto bg-white rounded-lg mt-12 max-w-7xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 py-2">
           Cart
@@ -64,9 +68,19 @@ const Cart = () => {
                       </div>
 
                       <div className="flex">
+                      <Modal
+                            title={`Delete ${product.title}`}
+                            message="Are you sure you want to delete this Cart item ?"
+                            dangerOption="Delete"
+                            cancelOption="Cancel"
+                            dangerAction={(e) => handleRemove(e, product.id)}
+                            cancelAction={()=>setOpenModal(null)}
+                            showModal={openModal === product.id}
+                          ></Modal>
                         <button
                           type="button"
-                          onClick={()=> handleRemove(product.id)}
+                          // onClick={()=> handleRemove(product.id)}
+                          onClick={e=>{setOpenModal(product.id)} }
                           className="font-medium text-indigo-600 hover:text-indigo-500"
                         >
                           Remove

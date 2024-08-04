@@ -7,6 +7,7 @@ import { StarIcon } from '@heroicons/react/20/solid';
 import { RadioGroup } from '@headlessui/react';
 import { selectLoggedInUser } from "../../utils/authSlice"
 import { discountedPrice } from "../../utils/constants";
+import { toast, ToastContainer } from "react-toastify";
 
 const colors = [
     { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
@@ -44,12 +45,38 @@ const colors = [
     const product = useSelector(selectProductById);
     const dispatch = useDispatch();
     const params = useParams();
+
+
+    const notify = (msg)=>toast(`${msg}`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+      });
   
     const handleCart = (e) => {
-      e.preventDefault();
-      const newItem = { ...product, quantity: 1, user: user.id };
-      delete newItem['id'];
-      dispatch(addToCartAsync(newItem));
+      e.preventDefault()
+      if (items.findIndex((item) => item.productId === product.id) < 0) {
+        console.log({ items, product });
+        const newItem = {
+          ...product,
+          productId: product.id,
+          quantity: 1,
+          user: user.id,
+        };
+        delete newItem['id'];
+        dispatch(addToCartAsync(newItem));
+        notify("Item is added to the cart")
+        // TODO: it will be based on server response of backend
+        // alert.error('Item added to Cart');
+      } else {
+        notify("item already added")
+      }
     };
   
     useEffect(() => {
@@ -58,6 +85,7 @@ const colors = [
   
     return (
       <div className="bg-white">
+        <ToastContainer/>
         {product && (
           <div className="pt-6">
             <nav aria-label="Breadcrumb">
