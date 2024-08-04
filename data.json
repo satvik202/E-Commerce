@@ -2148,7 +2148,8 @@
       "images": [
         "https://cdn.dummyjson.com/products/images/groceries/Protein%20Powder/1.png"
       ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Protein%20Powder/thumbnail.png"
+      "thumbnail": "https://cdn.dummyjson.com/products/images/groceries/Protein%20Powder/thumbnail.png",
+      "deleted": true
     },
     {
       "id": "37",

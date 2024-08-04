@@ -1,8 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { clearSelectedProduct, fetchProductByIdAsync, selectBrands, selectCategories, selectProductById, updateProductAsync } from '../../utils/productSlice';
+import { clearSelectedProduct, createProductAsync, fetchProductByIdAsync, selectBrands, selectCategories, selectProductById, updateProductAsync } from '../../utils/productSlice';
+import Modal from '../Modal';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
 
 function ProductForm() {
   const {
@@ -17,6 +19,21 @@ function ProductForm() {
   const dispatch = useDispatch();
   const params = useParams();
   const selectedProduct = useSelector(selectProductById);
+
+  const [openModal, setOpenModal] = useState(null);
+
+
+  const notify = (msg)=>toast(`${msg}`, {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+    transition: Bounce,
+    });
 
   useEffect(() => {
     if (params.id) {
@@ -47,9 +64,11 @@ function ProductForm() {
     const product = {...selectedProduct};
     product.deleted = true;
     dispatch(updateProductAsync(product));
+    notify(`product : ${product.title} has been deleted.`)
   }
 
   return (
+    <>
     <form
       noValidate
       onSubmit={handleSubmit((data) => {
@@ -89,6 +108,7 @@ function ProductForm() {
           </h2>
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          {selectedProduct.deleted && <h2 className="text-red-500 sm:col-span-6">This product is deleted</h2>}
             <div className="sm:col-span-6">
               <label
                 htmlFor="title"
@@ -418,7 +438,7 @@ function ProductForm() {
         </button>
 
        {selectedProduct && <button
-          onClick={(e)=> {e.preventDefault();handleDelete();}}
+          onClick={(e)=> {e.preventDefault();setOpenModal(true)}}
           className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Delete
@@ -432,6 +452,17 @@ function ProductForm() {
         </button>
       </div>
     </form>
+    <Modal
+        title={`Delete ${selectedProduct.title}`}
+        message="Are you sure you want to delete this Product ?"
+        dangerOption="Delete"
+        cancelOption="Cancel"
+        dangerAction={handleDelete}
+        cancelAction={() => setOpenModal(null)}
+        showModal={openModal}
+      ></Modal>
+      <ToastContainer/>
+    </>
   );
 }
 
