@@ -67,6 +67,11 @@ function ProductForm() {
     notify(`product : ${product.title} has been deleted.`)
   }
 
+
+  if(!selectedProduct){
+    return <>Loding</>
+  }
+
   return (
     <>
     <form

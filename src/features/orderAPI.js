@@ -34,7 +34,6 @@ export const fetchAllOrders = async (sort, pagination)=> {
     return new Promise(async (resolve) => {
         const response = await fetch("http://localhost:3000/orders?"+queryString)
         const data = await response.json();
-        console.log(data);
         const totalOrders = data.items;
         const orders = data.data;
         resolve({ data : {orders : orders, totalOrders : +totalOrders} });

@@ -38,7 +38,6 @@ function AdminOrders() {
   
     const handleSort = (sortOption) => {
       const sort = { _sort: sortOption.sort };
-      console.log({ sort });
       setSort(sort);
     };
   
@@ -109,8 +108,8 @@ function AdminOrders() {
                   </tr>
                 </thead>
                 <tbody className="text-gray-600 text-sm font-light">
-                  {orders.map((order) => (
-                    <tr className="border-b border-gray-200 hover:bg-gray-100">
+                  {orders && orders.map((order) => (
+                    <tr className="border-b border-gray-200 hover:bg-gray-100" key={order.id}>
                       <td className="py-3 px-6 text-left whitespace-nowrap">
                         <div className="flex items-center">
                           <div className="mr-2"></div>
@@ -123,14 +122,14 @@ function AdminOrders() {
                             {/* {console.log(item.price)} */}
                             <div className="mr-2">
                               <img
-                                className="w-6 h-6 rounded-full"
-                                src={item.thumbnail}
+                                className="w-14 h-12 rounded-full"
+                                src={item.product.thumbnail}
                               />
                             </div>
                             <span>
-                              {item.title} - #{item.quantity} - $
+                              {item.product.title} - #{item.quantity} - $
                               {/* {console.log(typeof( item.price))} */}
-                              {discountedPrice(item)}
+                              {discountedPrice(item.product)}
                             </span>
                           </div>
                         ))}
