@@ -18,7 +18,7 @@ export const updateCart = async (update)=> {
             headers : {'content-type':'application/json'}
         })
         const data = await response.json();
-        console.log(response, "in cartAPI")
+        // console.log(response, "in cartAPI")
         resolve({ data });
     })
 }

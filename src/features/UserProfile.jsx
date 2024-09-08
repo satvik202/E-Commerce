@@ -30,7 +30,7 @@ const UserProfile = () => {
         // console.log("inside handleRemove")
       const newUser = { ...user, addresses: [...user.addresses] }; // for shallow copy issue
       newUser.addresses.splice(index, 1);
-      console.log(newUser)
+      // console.log(newUser)
       dispatch(updateUserAsync(newUser));
     };
   
@@ -82,7 +82,7 @@ const UserProfile = () => {
                     className="bg-white px-5 py-12 mt-12"
                     noValidate
                     onSubmit={handleSubmit((data) => {
-                      console.log(data);
+                      // console.log(data);
                       handleAdd(data);
                       reset();
                     })}
@@ -289,7 +289,7 @@ const UserProfile = () => {
                     className="bg-white px-5 py-12 mt-12"
                     noValidate
                     onSubmit={handleSubmit((data) => {
-                      console.log(data);
+                      // console.log(data);
                       handleEdit(data, index);
                       reset();
                     })}

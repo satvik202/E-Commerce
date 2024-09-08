@@ -56,8 +56,8 @@ const Checkout = () => {
   const handleOrder = () => {
     const order = {
       items,
-      totalAmmount,
-      totalItemCount,
+      totalAmmount : totalAmmount,
+      totalItemCount : totalItemCount,
       user : user.id,
       paymentMethod,
       selectedAddress,

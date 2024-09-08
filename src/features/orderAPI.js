@@ -1,5 +1,5 @@
 export const createOrder = async (order)=> {
-    console.log(order, "order")
+    // console.log(order, "order")
     return new Promise(async (resolve) => {
         const response = await fetch("http://localhost:3000/orders", {
             method : 'POST',
@@ -30,7 +30,7 @@ export const fetchAllOrders = async (sort, pagination)=> {
     for (let key in pagination) {
         queryString += `${key}=${pagination[key]}&`;
       }
-      console.log(queryString, "inside fetchAllOrders")
+    //   console.log(queryString, "inside fetchAllOrders")
     return new Promise(async (resolve) => {
         const response = await fetch("http://localhost:3000/orders?"+queryString)
         const data = await response.json();
