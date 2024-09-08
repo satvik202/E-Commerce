@@ -69,7 +69,7 @@ const Login = () => {
                 />
               </div>
               {errors?.password && <p className="text-red-500">{errors.password.message}</p>}
-              {error && <p className="text-red-500">{error.message}</p>}
+              {error?.message && <p className="text-red-500">{error.message}</p>}
             </div>
 
             <div>

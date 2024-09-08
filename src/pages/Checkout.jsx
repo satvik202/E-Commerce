@@ -10,6 +10,7 @@ import { updateUserAsync } from "../utils/authSlice";
 import { useState } from "react";
 import { createOrderAsync, selectCurrentOrder } from "../utils/orderSlice";
 import { selectUserInfo } from "../utils/userSlice";
+import { discountedPrice } from "../utils/constants";
 
 const Checkout = () => {
   const items = useSelector(selectCart);
@@ -18,7 +19,7 @@ const Checkout = () => {
   const dispatch = useDispatch();
   const totalAmmount = items.reduce(
     (amount, item) =>
-      amount + item.price * (1 - item.discountPercentage / 100) * item.quantity,
+      amount + item.product.price * (1 - item.product.discountPercentage / 100) * item.quantity,
     0
   );
   const totalItemCount = items.reduce(
@@ -45,7 +46,7 @@ const Checkout = () => {
   } = useForm();
 
   const handleQty = (e, product) => {
-    dispatch(updateCartAsync({ ...product, quantity: +e.target.value }));
+    dispatch(updateCartAsync({ id:product.id, quantity: +e.target.value }));
   };
 
   const handleRemove = (id) => {
@@ -57,7 +58,7 @@ const Checkout = () => {
       items,
       totalAmmount,
       totalItemCount,
-      user,
+      user : user.id,
       paymentMethod,
       selectedAddress,
       status : "pending"  // admin will change it to dispatched/delivered
@@ -344,8 +345,8 @@ const Checkout = () => {
                     <li key={product.id} className="flex py-6">
                       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                         <img
-                          alt={product.title}
-                          src={product.images[0]}
+                          alt={product.product.title}
+                          src={product.product.images[0]}
                           className="h-full w-full object-cover object-center"
                         />
                       </div>
@@ -354,17 +355,15 @@ const Checkout = () => {
                         <div>
                           <div className="flex justify-between text-base font-medium text-gray-900">
                             <h3>
-                              <a href={product.href}>{product.title}</a>
+                              <a href={product.href}>{product.product.title}</a>
                             </h3>
                             <p className="ml-4">
                               {Math.round(
-                                product.price *
-                                  (1 - product.discountPercentage / 100)
-                              ) * product.quantity}
+                                discountedPrice(product.product) * product.quantity)}
                             </p>
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
-                            {product?.brand}
+                            {product.product?.brand}
                           </p>
                         </div>
                         <div className="flex flex-1 items-end justify-between text-sm">

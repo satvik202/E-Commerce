@@ -18,6 +18,7 @@ export const updateCart = async (update)=> {
             headers : {'content-type':'application/json'}
         })
         const data = await response.json();
+        console.log(response, "in cartAPI")
         resolve({ data });
     })
 }
@@ -27,7 +28,7 @@ export const deleteItemFromCart = async (itemId)=> {
             method : 'DELETE',
             headers : {'content-type':'application/json'}
         })
-        const data = await response.json();
+        // const data = await response.json();
         resolve({ data : {id:itemId} });
     })
 }

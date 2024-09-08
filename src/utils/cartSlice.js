@@ -24,6 +24,7 @@ export const updateCartAsync = createAsyncThunk(
     'cart/updateCart',
     async (update)=>{
         const response = await updateCart(update);
+        console.log(response)
         return response.data;
     }
 )

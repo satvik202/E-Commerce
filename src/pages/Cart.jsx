@@ -3,16 +3,17 @@ import { Link, Navigate } from "react-router-dom";
 import { deleteItemFromCartAsync, selectCart, updateCartAsync } from "../utils/cartSlice";
 import Modal from "../features/Modal"
 import { useState } from "react";
+import { discountedPrice } from "../utils/constants";
 const Cart = () => {
   const [openModal, setOpenModal] = useState(null);
   const items = useSelector(selectCart)
   const dispatch = useDispatch()
-  const totalAmmount = items.reduce((amount, item)=> amount+ item.price*(1-item.discountPercentage/100)*item.quantity, 0);
+  const totalAmmount = items.reduce((amount, item)=> amount+ item.product.price*(1-item.product.discountPercentage/100)*item.quantity, 0);
   const totalItemCount = items.reduce((amount, item)=> amount+ item.quantity, 0);
 
 
   const handleQty = (e, product)=>{
-    dispatch(updateCartAsync({...product, quantity: +e.target.value}))
+    dispatch(updateCartAsync({id:product.id, quantity: +e.target.value}))
   }
 
   const handleRemove = (e, id)=>{
@@ -32,11 +33,11 @@ const Cart = () => {
           <div className="flow-root">
             <ul role="list" className="-my-6 divide-y divide-gray-200">
               {items.map((product) => (
-                <li key={product.id} className="flex py-6">
+                <li key={product.product.id} className="flex py-6">
                   <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                     <img
-                      alt={product.title}
-                      src={product.images[0]}
+                      alt={product.product.title}
+                      src={product.product.images[0]}
                       className="h-full w-full object-cover object-center"
                     />
                   </div>
@@ -45,12 +46,12 @@ const Cart = () => {
                     <div>
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <h3>
-                          <a href={product.href}>{product.title}</a>
+                          <a href={product.product.id}>{product.product.title}</a>
                         </h3>
-                        <p className="ml-4">{Math.round((product.price)*(1 - product.discountPercentage/100))*product.quantity}</p>
+                        <p className="ml-4">{discountedPrice(product.product)*product.quantity}</p>
                       </div>
                       <p className="mt-1 text-sm text-gray-500">
-                        {product?.brand}
+                        {product.product?.brand}
                       </p>
                     </div>
                     <div className="flex flex-1 items-end justify-between text-sm">
@@ -69,18 +70,18 @@ const Cart = () => {
 
                       <div className="flex">
                       <Modal
-                            title={`Delete ${product.title}`}
+                            title={`Delete ${product.product.title}`}
                             message="Are you sure you want to delete this Cart item ?"
                             dangerOption="Delete"
                             cancelOption="Cancel"
                             dangerAction={(e) => handleRemove(e, product.id)}
                             cancelAction={()=>setOpenModal(null)}
-                            showModal={openModal === product.id}
+                            showModal={openModal === product.product.id}
                           ></Modal>
                         <button
                           type="button"
                           // onClick={()=> handleRemove(product.id)}
-                          onClick={e=>{setOpenModal(product.id)} }
+                          onClick={e=>{setOpenModal(product.product.id)} }
                           className="font-medium text-indigo-600 hover:text-indigo-500"
                         >
                           Remove
